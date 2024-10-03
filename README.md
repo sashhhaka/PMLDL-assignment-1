@@ -8,3 +8,13 @@ Dataset is also from provided in the competition: https://www.kaggle.com/competi
 **Backend**: Docker, Python, FastAPI, Uvicorn
 **Frontend**: Streamlit
 
+### How to run:
+1. Clone the repository
+2. Run:
+```bash
+docker-compose build
+docker-compose up
+```
+
+To run airflow tasks simply run the usual airflow launch commands, the data_engineering_dag.py will start automatically.
+
