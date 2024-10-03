@@ -1,2 +1,7 @@
 pandas
 scikit-learn
+fastapi
+uvicorn
+xgboost
+streamlit
+requests
