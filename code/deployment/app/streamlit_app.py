@@ -18,7 +18,7 @@ day_of_month = st.select_slider("Day of Month", options=["c-1", "c-2", "c-3", "c
                                                          "c-25", "c-26", "c-27", "c-28", "c-29", "c-30",
                                                          "c-31"])
 day_of_week = st.select_slider("Day of Week", options=["c-1", "c-2", "c-3", "c-4", "c-5", "c-6", "c-7"])
-dep_time = st.number_input("Departure Time", min_value=100, max_value=2459)
+dep_time = st.number_input("Departure Time, first 1-2 digits are hour, last 2 digits are minutes", min_value=100, max_value=2459)
 
 unique_carrier = st.selectbox("Unique Carrier, code of a company-career", options=['AA', 'US', 'XE', 'OO', 'WN', 'NW', 'DL', 'OH', 'AS', 'UA', 'MQ',
        'CO', 'EV', 'DH', 'YV', 'F9', 'AQ', 'TZ', 'HP', 'B6', 'FL', 'HA'])
@@ -114,4 +114,4 @@ if st.button("Predict"):
     prediction = response.json()["prediction"]
 
     # Display the result
-    st.success(f"The flight is likely {'delayed' if prediction == 1 else 'not delayed'}")
+    st.success(f"The flight is likely {'**delayed**' if prediction == 1 else '**not delayed**'}")
