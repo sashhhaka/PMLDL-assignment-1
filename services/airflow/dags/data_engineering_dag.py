@@ -39,7 +39,7 @@ with DAG(
     # Task 3: Split Data and Save
     split_task = BashOperator(
         task_id='split_data',
-        bash_command='python code/datasets/data_preprocessing.py split_and_save data/processed/cleaned_data.csv data/processed/train_data.csv data/processed/test_data.csv',
+        bash_command='python code/datasets/data_preprocessing.py split_and_save data/raw/raw_data.csv data/processed/cleaned_data.csv data/processed/train_data.csv data/processed/test_data.csv',
         cwd=project_root,
     )
 
