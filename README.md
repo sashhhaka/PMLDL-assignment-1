@@ -16,5 +16,7 @@ docker-compose build
 docker-compose up
 ```
 
+Backend: http://localhost:8000/docs, and Streamlit at http://localhost:8501
+
 To run airflow tasks simply run the usual airflow launch commands, the data_engineering_dag.py will start automatically.
 
